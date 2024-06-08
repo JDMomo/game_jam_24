@@ -1,6 +1,5 @@
-// o_player Step Event
+// Step Event of obj_player
 
-// Step Event for obj_player
 // Define sprites
 var idle_sprite = spr_player_idle; // The idle sprite
 var walk_sprite = spr_player_walk; // The walking sprite
@@ -8,17 +7,30 @@ var run_sprite = spr_player_run; // The running sprite
 var jump_sprite = spr_player_jump; // The jump sprite
 var glide_sprite = spr_player_glide; // The glide sprite
 var crouch_sprite = spr_player_crouch; // The crouch sprite
+var punch_sprite = spr_player_punch; // The punch sprite
 
 // Define speeds
 var walkspeed = 4; // The walking speed
 var runspeed = 6; // The running speed
 
+// Initialize punch variables
+if (!variable_instance_exists(id, "isPunching")) {
+    isPunching = false;
+    punchCounter = 0;
+    punchCooldown = 2 * room_speed; // Punch lasts for 2 seconds
+    canBypassWalls = false;
+}
+
 // Check if Shift key is pressed
 var shift_pressed = keyboard_check(vk_shift);
 
 // Determine the current speed and sprite
-var current_speed = shift_pressed ? runspeed : walkspeed;
-var current_sprite = shift_pressed ? run_sprite : walk_sprite;
+var current_speed = walkspeed;
+var current_sprite = walk_sprite;
+if (shift_pressed) {
+    current_speed = runspeed;
+    current_sprite = run_sprite;
+}
 
 // Horizontal movement input
 var _right = keyboard_check(vk_right) || keyboard_check(ord("D"));
@@ -33,8 +45,49 @@ if (isCrouching) {
     current_sprite = crouch_sprite; // Change to crouch sprite
 }
 
+// Handle punch input
+if (keyboard_check_pressed(ord("E")) && punchCounter <= 0) {
+    isPunching = true;
+    punchCounter = punchCooldown;
+    canBypassWalls = true; // Enable collision bypass
+}
+
+// Reduce punch counter if it's above 0
+if (punchCounter > 0) {
+    punchCounter -= 1;
+    if (punchCounter <= 0) {
+        isPunching = false;
+        canBypassWalls = false; // Disable collision bypass after punch
+    }
+}
+
+// If punching, switch to punch sprite and manage animation
+if (isPunching) {
+    sprite_index = punch_sprite;
+    image_speed = 1; // Adjust based on your punch animation speed
+
+    // Assuming the punch animation is 10 frames long
+    if (image_index >= 9) {
+        isPunching = false;
+        canBypassWalls = false; // Disable collision bypass after punch
+        sprite_index = idle_sprite; // Return to idle sprite after punch
+        image_speed = 0;
+    }
+} else if (!isCrouching) {
+    // Set current sprite when not crouching or punching
+    current_sprite = _xinput != 0 ? walk_sprite : idle_sprite;
+}
+
 // Move horizontally
 var _hspd = _xinput * current_speed;
+
+// Horizontal collision check
+if (!canBypassWalls && place_meeting(x + _hspd, y, obj_wall)) {
+    while (!place_meeting(x + sign(_hspd), y, obj_wall)) {
+        x += sign(_hspd);
+    }
+    _hspd = 0;
+}
 x += _hspd;
 
 // Apply gravity
@@ -67,7 +120,13 @@ if (keyboard_check(vk_space) && !place_meeting(x, y + 1, obj_ground) && vspd > 0
     isGliding = true;
 }
 
-// Update vertical position
+// Vertical collision check
+if (!canBypassWalls && place_meeting(x, y + vspd, obj_wall)) {
+    while (!place_meeting(x, y + sign(vspd), obj_wall)) {
+        y += sign(vspd);
+    }
+    vspd = 0;
+}
 y += vspd;
 
 // Check for horizontal movement to switch sprites
@@ -87,7 +146,7 @@ if (isGliding) {
     // Set crouch sprite when the player is crouching
     sprite_index = crouch_sprite;
     image_speed = 0; // Stop animation for crouch sprite if needed
-} else {
+} else if (!isPunching) { // Ensure idle sprite is set only when not punching
     // Set idle sprite when the player is not moving
     sprite_index = idle_sprite;
     image_speed = 0; // Stop animation for idle sprite
@@ -104,4 +163,3 @@ if (_hspd > 0) {
 if (keyboard_check_pressed(ord("P"))) {
     game_restart();
 }
-
