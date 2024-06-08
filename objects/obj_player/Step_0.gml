@@ -82,8 +82,8 @@ if (isPunching) {
 var _hspd = _xinput * current_speed;
 
 // Horizontal collision check
-if (!canBypassWalls && place_meeting(x + _hspd, y, obj_wall)) {
-    while (!place_meeting(x + sign(_hspd), y, obj_wall)) {
+if (object_exists(obj_wall) && !canBypassWalls && place_meeting(x + _hspd, y, obj_wall)) {
+    while (object_exists(obj_wall) && !place_meeting(x + sign(_hspd), y, obj_wall)) {
         x += sign(_hspd);
     }
     _hspd = 0;
@@ -122,7 +122,7 @@ if (keyboard_check(vk_space) && !place_meeting(x, y + 1, obj_ground) && vspd > 0
 
 // Vertical collision check
 if (!canBypassWalls && place_meeting(x, y + vspd, obj_wall)) {
-    while (!place_meeting(x, y + sign(vspd), obj_wall)) {
+    while (object_exists(obj_wall) && !place_meeting(x, y + sign(vspd), obj_wall)) {
         y += sign(vspd);
     }
     vspd = 0;
