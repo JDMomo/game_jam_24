@@ -36,7 +36,7 @@
     {"name":"spr_levelvictory","order":19,"path":"sprites/spr_levelvictory/spr_levelvictory.yy",},
     {"name":"spr_parkbench","order":4,"path":"sprites/spr_parkbench/spr_parkbench.yy",},
     {"name":"spr_player_crouch","order":1,"path":"sprites/spr_player_crouch/spr_player_crouch.yy",},
-    {"name":"spr_player_punch","order":13,"path":"sprites/spr_player_punch/spr_player_punch.yy",},
+    {"name":"spr_player_jump","order":13,"path":"sprites/spr_player_jump/spr_player_jump.yy",},
     {"name":"spr_rock","order":12,"path":"sprites/spr_rock/spr_rock.yy",},
     {"name":"spr_rollingrock","order":15,"path":"sprites/spr_rollingrock/spr_rollingrock.yy",},
     {"name":"spr_sewergrate1","order":13,"path":"sprites/spr_sewergrate1/spr_sewergrate1.yy",},
