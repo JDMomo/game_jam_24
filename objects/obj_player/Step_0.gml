@@ -1,0 +1,50 @@
+// Initialize movement variables
+var _right = keyboard_check(vk_right) || keyboard_check(ord("D"));
+var _left = keyboard_check(vk_left) || keyboard_check(ord("A"));
+var _jump = keyboard_check_pressed(vk_space); // Detect when spacebar is pressed
+
+// Define constants
+var my_speed = 4;
+var _jumpSpeed = -10;
+var _gravity = 0.5;
+
+// Initialize persistent variables if they haven't been already
+if (!variable_instance_exists(id, "vspd")) {
+    vspd = 0;
+}
+
+if (!variable_instance_exists(id, "_canDoubleJump")) {
+    _canDoubleJump = true;
+}
+
+// Apply gravity
+if (!place_meeting(x, y + 1, obj_ground)) {
+    // If not colliding with the ground, apply gravity
+    vspd += _gravity;
+} else {
+    // Reset vertical speed when colliding with the ground
+    vspd = 0;
+}
+
+// Handle jumping
+if (_jump) {
+    if (place_meeting(x, y + 1, obj_ground)) {
+        // If spacebar is pressed and character is on the ground, perform regular jump
+        vspd = _jumpSpeed;
+        _canDoubleJump = true; // Allow double jump after regular jump
+    } else if (_canDoubleJump) {
+        // If spacebar is pressed and character is in mid-air and has not used double jump yet, perform double jump
+        vspd = _jumpSpeed;
+        _canDoubleJump = false; // Double jump used, disable it until landing again
+    }
+}
+
+// Calculate movement based on inputs
+var _xinput = _right - _left;
+
+// Move horizontally
+var _hspd = _xinput * my_speed;
+
+// Apply horizontal and vertical speed to the player's position
+x += _hspd;
+y += vspd;
