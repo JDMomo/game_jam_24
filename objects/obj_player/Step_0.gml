@@ -1,11 +1,13 @@
 // o_player Step Event
 
+// Step Event for obj_player
 // Define sprites
 var idle_sprite = spr_player_idle; // The idle sprite
 var walk_sprite = spr_player_walk; // The walking sprite
 var run_sprite = spr_player_run; // The running sprite
 var jump_sprite = spr_player_jump; // The jump sprite
 var glide_sprite = spr_player_glide; // The glide sprite
+var crouch_sprite = spr_player_crouch; // The crouch sprite
 
 // Define speeds
 var walkspeed = 4; // The walking speed
@@ -22,6 +24,14 @@ var current_sprite = shift_pressed ? run_sprite : walk_sprite;
 var _right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 var _left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 var _xinput = _right - _left;
+
+// Handle crouching input
+var isCrouching = keyboard_check(vk_down) || keyboard_check(ord("S"));
+
+if (isCrouching) {
+    current_speed = _crouchSpeed; // Slow down while crouching
+    current_sprite = crouch_sprite; // Change to crouch sprite
+}
 
 // Move horizontally
 var _hspd = _xinput * current_speed;
@@ -73,6 +83,10 @@ if (isGliding) {
     // Set moving sprite when the player is moving horizontally
     sprite_index = current_sprite;
     image_speed = 1; // Set to the desired animation speed
+} else if (isCrouching) {
+    // Set crouch sprite when the player is crouching
+    sprite_index = crouch_sprite;
+    image_speed = 0; // Stop animation for crouch sprite if needed
 } else {
     // Set idle sprite when the player is not moving
     sprite_index = idle_sprite;
@@ -90,3 +104,4 @@ if (_hspd > 0) {
 if (keyboard_check_pressed(ord("P"))) {
     game_restart();
 }
+

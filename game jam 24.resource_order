@@ -2,5 +2,6 @@
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
     {"name":"obj_camera","order":1,"path":"objects/obj_camera/obj_camera.yy",},
+    {"name":"spr_player_crouch","order":1,"path":"sprites/spr_player_crouch/spr_player_crouch.yy",},
   ],
 }

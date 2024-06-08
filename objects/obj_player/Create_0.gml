@@ -8,3 +8,4 @@ _glideSpeed = 1; // Adjust as needed (this controls how fast the character desce
 _canDoubleJump = true; // Allow double jump after regular jump
 // Initial sprite direction (1 for right, -1 for left)
 facing = 1;
+_crouchSpeed = 2; // Speed while crouching
