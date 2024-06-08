@@ -44,7 +44,6 @@
     {"id":{"name":"obj_groundcornerfill","path":"objects/obj_groundcornerfill/obj_groundcornerfill.yy",},},
     {"id":{"name":"obj_grounddiagnal","path":"objects/obj_grounddiagnal/obj_grounddiagnal.yy",},},
     {"id":{"name":"obj_grounddirt","path":"objects/obj_grounddirt/obj_grounddirt.yy",},},
-    {"id":{"name":"obj_groundgrass","path":"objects/obj_groundgrass/obj_groundgrass.yy",},},
     {"id":{"name":"obj_groundsnow","path":"objects/obj_groundsnow/obj_groundsnow.yy",},},
     {"id":{"name":"obj_music","path":"objects/obj_music/obj_music.yy",},},
     {"id":{"name":"obj_parkbench","path":"objects/obj_parkbench/obj_parkbench.yy",},},
@@ -89,8 +88,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"mattsroom","path":"rooms/mattsroom/mattsroom.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"mattsroom","path":"rooms/mattsroom/mattsroom.yy",},},
     {"roomId":{"name":"jakespracticeroom","path":"rooms/jakespracticeroom/jakespracticeroom.yy",},},
   ],
   "templateType":"game",
