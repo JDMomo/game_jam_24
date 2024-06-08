@@ -27,7 +27,7 @@ if (_crouch) {
 }
 
 // Apply gravity
-if (!place_meeting(x, y + 1, obj_ground)) {
+if (!place_meeting(x, y + vspd, obj_ground)) {
     if (_glide && vspd > _glideSpeed) {
         // If gliding and falling faster than glide speed, apply glide speed
         vspd = _glideSpeed;
