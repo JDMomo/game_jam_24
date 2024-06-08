@@ -5,7 +5,7 @@ _isGliding = false;
 _isCrouching = false;
 
 // Define constants
-my_speed = 4;
+my_speed = 3;
 _jumpSpeed = -10;
 _gravity = 0.5;
 _glideSpeed = .5; // Speed during glide
