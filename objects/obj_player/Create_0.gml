@@ -8,7 +8,7 @@ _isCrouching = false;
 my_speed = 4;
 _jumpSpeed = -10;
 _gravity = 0.5;
-_glideSpeed = -2; // Speed during glide
+_glideSpeed = .5; // Speed during glide
 
 // Define crouching const
 _normalHeight = 1;
