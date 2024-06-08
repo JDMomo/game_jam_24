@@ -7,9 +7,9 @@
   },
   "bitDepth":1,
   "bitRate":128,
-  "compression":0,
+  "compression":1,
   "conversionMode":0,
-  "duration":24.935068,
+  "duration":32.856,
   "name":"snd_background",
   "parent":{
     "name":"Sounds",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_background.wav",
+  "soundFile":"snd_background.mp3",
   "type":0,
-  "volume":0.85,
+  "volume":1.0,
 }

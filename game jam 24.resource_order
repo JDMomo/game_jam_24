@@ -10,6 +10,7 @@
     {"name":"obj_groundcornerfill","order":6,"path":"objects/obj_groundcornerfill/obj_groundcornerfill.yy",},
     {"name":"obj_grounddiagnal","order":5,"path":"objects/obj_grounddiagnal/obj_grounddiagnal.yy",},
     {"name":"obj_groundsnow","order":15,"path":"objects/obj_groundsnow/obj_groundsnow.yy",},
+    {"name":"obj_music","order":16,"path":"objects/obj_music/obj_music.yy",},
     {"name":"obj_parkbench","order":4,"path":"objects/obj_parkbench/obj_parkbench.yy",},
     {"name":"obj_rock","order":12,"path":"objects/obj_rock/obj_rock.yy",},
     {"name":"obj_rollingrock","order":14,"path":"objects/obj_rollingrock/obj_rollingrock.yy",},
