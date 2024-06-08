@@ -3,7 +3,6 @@
   "ResourceOrderSettings":[
     {"name":"obj_blacksquare","order":7,"path":"objects/obj_blacksquare/obj_blacksquare.yy",},
     {"name":"obj_box","order":10,"path":"objects/obj_box/obj_box.yy",},
-    {"name":"obj_bugged","order":17,"path":"objects/obj_bugged/obj_bugged.yy",},
     {"name":"obj_bush","order":11,"path":"objects/obj_bush/obj_bush.yy",},
     {"name":"obj_camera","order":1,"path":"objects/obj_camera/obj_camera.yy",},
     {"name":"obj_car","order":8,"path":"objects/obj_car/obj_car.yy",},
@@ -11,7 +10,7 @@
     {"name":"obj_groundcornerfill","order":6,"path":"objects/obj_groundcornerfill/obj_groundcornerfill.yy",},
     {"name":"obj_grounddiagnal","order":5,"path":"objects/obj_grounddiagnal/obj_grounddiagnal.yy",},
     {"name":"obj_grounddirt","order":18,"path":"objects/obj_grounddirt/obj_grounddirt.yy",},
-    {"name":"obj_groundsnow_1","order":19,"path":"objects/obj_groundsnow_1/obj_groundsnow_1.yy",},
+    {"name":"obj_groundgrass","order":17,"path":"objects/obj_groundgrass/obj_groundgrass.yy",},
     {"name":"obj_groundsnow","order":15,"path":"objects/obj_groundsnow/obj_groundsnow.yy",},
     {"name":"obj_music","order":16,"path":"objects/obj_music/obj_music.yy",},
     {"name":"obj_parkbench","order":4,"path":"objects/obj_parkbench/obj_parkbench.yy",},
