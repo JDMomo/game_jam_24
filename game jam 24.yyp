@@ -38,6 +38,7 @@
     {"id":{"name":"obj_finishline","path":"objects/obj_finishline/obj_finishline.yy",},},
     {"id":{"name":"obj_ground","path":"objects/obj_ground/obj_ground.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"mattsroom","path":"rooms/mattsroom/mattsroom.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_finishline","path":"sprites/spr_finishline/spr_finishline.yy",},},
     {"id":{"name":"spr_ground","path":"sprites/spr_ground/spr_ground.yy",},},
@@ -53,6 +54,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"mattsroom","path":"rooms/mattsroom/mattsroom.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
