@@ -130,6 +130,12 @@ if (timer >= invertColorDuration) {
     isInvertedColorActive = true;
 }
 
+// Check for collision with obj_finishline and transition to next room
+if (place_meeting(x, y, obj_finishline)) {
+    // Transition to the next room
+    room_goto_next();
+}
+
 // Restart game on pressing "P"
 if (keyboard_check_pressed(ord("P"))) {
     game_restart();
