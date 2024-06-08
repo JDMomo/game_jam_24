@@ -18,8 +18,6 @@
   ],
   "ResourceOrderSettings":[
     {"name":"obj_ground","order":1,"path":"objects/obj_ground/obj_ground.yy",},
-    {"name":"obj_ground2","order":2,"path":"objects/obj_ground2/obj_ground2.yy",},
     {"name":"spr_ground","order":1,"path":"sprites/spr_ground/spr_ground.yy",},
-    {"name":"Sprite3","order":3,"path":"sprites/Sprite3/Sprite3.yy",},
   ],
 }

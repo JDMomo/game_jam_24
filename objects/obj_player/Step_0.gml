@@ -15,7 +15,7 @@ if (!place_meeting(x, y + 1, obj_ground)) {
 
 // Handle jumping
 if (_jump) {
-    if (place_meeting(x, y + 1, obj_ground)) {
+    if (place_meeting(x, y + 1,obj_ground)) {
         // If spacebar is pressed and character is on the ground, perform regular jump
         vspd = _jumpSpeed;
         _canDoubleJump = true; // Allow double jump after regular jump
