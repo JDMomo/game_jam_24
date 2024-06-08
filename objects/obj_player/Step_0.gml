@@ -2,6 +2,7 @@
 var _right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 var _left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 var _jump = keyboard_check_pressed(vk_space); // Detect when spacebar is pressed
+var _restart = keyboard_check_pressed(ord("P")); // Detect when P is pressed
 
 // Apply gravity
 if (!place_meeting(x, y + 1, obj_ground)) {
@@ -34,3 +35,8 @@ var _hspd = _xinput * my_speed;
 // Apply horizontal and vertical speed to the player's position
 x += _hspd;
 y += vspd;
+
+// Restart the room if P is pressed
+if (_restart) {
+    room_restart();
+}
