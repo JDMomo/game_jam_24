@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_camera",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_rightspike",
+  "eventList":[],
   "managed":true,
-  "name":"obj_camera",
+  "name":"obj_rightspike",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -29,7 +27,13 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
-  "spriteMaskId":null,
+  "spriteId":{
+    "name":"Sprite3",
+    "path":"sprites/Sprite3/Sprite3.yy",
+  },
+  "spriteMaskId":{
+    "name":"spr_ground",
+    "path":"sprites/spr_ground/spr_ground.yy",
+  },
   "visible":true,
 }
