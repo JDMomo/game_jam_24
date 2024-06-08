@@ -9,3 +9,11 @@ _canDoubleJump = true; // Allow double jump after regular jump
 // Initial sprite direction (1 for right, -1 for left)
 facing = 1;
 _crouchSpeed = 2; // Speed while crouching
+
+// Create event of obj_player
+isPunching = false; // Flag to check if player is punching
+punchCooldown = 10; // Frames before player can punch again
+punchCounter = 0; // Counter to manage cooldown
+canBypassWalls = false; // Flag to bypass wall collisions when punching
+
+_hspd = 0;
