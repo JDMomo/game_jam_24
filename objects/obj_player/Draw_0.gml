@@ -1,5 +1,15 @@
+// Apply shader for color inversion if the timer has reached the duration
+if (isInvertedColorActive) {
+    shader_set(shd_invert);
+}
+
 // Draw the player as usual
 draw_self();
+
+// Reset shader
+if (isInvertedColorActive) {
+    shader_reset();
+}
 
 // Draw red tint if the timer has reached the red tint duration
 if (isRedTintActive) {
