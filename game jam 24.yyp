@@ -84,9 +84,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"mattsroom","path":"rooms/mattsroom/mattsroom.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"jakespracticeroom","path":"rooms/jakespracticeroom/jakespracticeroom.yy",},},
-    {"roomId":{"name":"mattsroom","path":"rooms/mattsroom/mattsroom.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
