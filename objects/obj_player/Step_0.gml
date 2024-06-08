@@ -1,21 +1,8 @@
-// Initialize movement variables
+// Handle input
 var _right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 var _left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 var _jump = keyboard_check_pressed(vk_space); // Detect when spacebar is pressed
-
-// Define constants
-var my_speed = 4;
-var _jumpSpeed = -10;
-var _gravity = 0.5;
-
-// Initialize persistent variables if they haven't been already
-if (!variable_instance_exists(id, "vspd")) {
-    vspd = 0;
-}
-
-if (!variable_instance_exists(id, "_canDoubleJump")) {
-    _canDoubleJump = true;
-}
+var _restart = keyboard_check_pressed(ord("P")); // Detect when P is pressed
 
 // Apply gravity
 if (!place_meeting(x, y + 1, obj_ground)) {
@@ -48,3 +35,8 @@ var _hspd = _xinput * my_speed;
 // Apply horizontal and vertical speed to the player's position
 x += _hspd;
 y += vspd;
+
+// Restart the room if P is pressed
+if (_restart) {
+    room_restart();
+}
