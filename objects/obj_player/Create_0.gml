@@ -10,10 +10,12 @@ crouchSpeed = 2; // Speed while crouching
 // Initial sprite direction (1 for right, -1 for left)
 facing = 1;
 
-// Initialize timer
+// Initialize timer and duration for effects
 timer = 0;
-redTintDuration = 30 * room_speed; // 30 seconds in game frames
-isRedTintActive = false;
+redTintDuration = 4 * room_speed; // 30 seconds in game frames
+invertColorDuration = 4 * room_speed; // 40 seconds in game frames
+isRedTintActive = false; // Flag to check if red tint is active
+isInvertedColorActive = false; // Flag to check if color inversion is active
 
 // Initialize punch variables
 isPunching = false;
