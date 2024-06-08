@@ -28,6 +28,7 @@
     {"name":"spr_groundcornerfill","order":6,"path":"sprites/spr_groundcornerfill/spr_groundcornerfill.yy",},
     {"name":"spr_grounddiagnal","order":5,"path":"sprites/spr_grounddiagnal/spr_grounddiagnal.yy",},
     {"name":"spr_grounddirt","order":17,"path":"sprites/spr_grounddirt/spr_grounddirt.yy",},
+    {"name":"spr_groundgrassupdated","order":18,"path":"sprites/spr_groundgrassupdated/spr_groundgrassupdated.yy",},
     {"name":"spr_groundsnow","order":16,"path":"sprites/spr_groundsnow/spr_groundsnow.yy",},
     {"name":"spr_level1background","order":9,"path":"sprites/spr_level1background/spr_level1background.yy",},
     {"name":"spr_parkbench","order":4,"path":"sprites/spr_parkbench/spr_parkbench.yy",},
