@@ -113,8 +113,11 @@ if (_hspd > 0) {
     image_xscale = -1;
 }
 
-// Update timer and effects check
+// Update timer and check for effects
 timer += 1;
+if (timer >= zoomDuration) {
+    isZoomActive = true;
+}
 if (timer >= redTintDuration) {
     isRedTintActive = true;
 }
