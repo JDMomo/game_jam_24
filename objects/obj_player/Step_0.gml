@@ -1,5 +1,5 @@
 // Define sprites
-var idle_sprite = spr_player_idle;
+var idle_sprite = spr_player_idle1;
 var walk_sprite = spr_player_walk;
 var run_sprite = spr_player_run;
 var jump_sprite = spr_player_jump;

@@ -12,10 +12,10 @@ facing = 1;
 
 // Initialize timer and duration for effects
 timer = 0;
-zoomDuration = 1 * room_speed; // 20 seconds in game frames
-redTintDuration = 3 * room_speed; // 30 seconds in game frames
-invertColorDuration = 4 * room_speed; // 40 seconds in game frames
-invertControlsDuration = 5 * room_speed; // 50 seconds in game frames
+zoomDuration = 60 * room_speed; // 20 seconds in game frames
+redTintDuration = 60 * room_speed; // 30 seconds in game frames
+invertColorDuration = 60 * room_speed; // 40 seconds in game frames
+invertControlsDuration = 60 * room_speed; // 50 seconds in game frames
 isZoomActive = false; // Flag to check if zoom is active
 isRedTintActive = false; // Flag to check if red tint is active
 isInvertedColorActive = false; // Flag to check if color inversion is active

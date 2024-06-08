@@ -76,6 +76,7 @@
     {"id":{"name":"spr_player_crouch","path":"sprites/spr_player_crouch/spr_player_crouch.yy",},},
     {"id":{"name":"spr_player_glide","path":"sprites/spr_player_glide/spr_player_glide.yy",},},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},},
+    {"id":{"name":"spr_player_idle1","path":"sprites/spr_player_idle1/spr_player_idle1.yy",},},
     {"id":{"name":"spr_player_jump","path":"sprites/spr_player_jump/spr_player_jump.yy",},},
     {"id":{"name":"spr_player_punch","path":"sprites/spr_player_punch/spr_player_punch.yy",},},
     {"id":{"name":"spr_player_run","path":"sprites/spr_player_run/spr_player_run.yy",},},

@@ -34,6 +34,7 @@
     {"name":"spr_level1background","order":9,"path":"sprites/spr_level1background/spr_level1background.yy",},
     {"name":"spr_parkbench","order":4,"path":"sprites/spr_parkbench/spr_parkbench.yy",},
     {"name":"spr_player_crouch","order":1,"path":"sprites/spr_player_crouch/spr_player_crouch.yy",},
+    {"name":"spr_player_idle","order":22,"path":"sprites/spr_player_idle/spr_player_idle.yy",},
     {"name":"spr_player_punch","order":13,"path":"sprites/spr_player_punch/spr_player_punch.yy",},
     {"name":"spr_rock","order":12,"path":"sprites/spr_rock/spr_rock.yy",},
     {"name":"spr_rollingrock","order":15,"path":"sprites/spr_rollingrock/spr_rollingrock.yy",},
