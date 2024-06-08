@@ -2,6 +2,8 @@
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
     {"name":"obj_camera","order":1,"path":"objects/obj_camera/obj_camera.yy",},
+    {"name":"obj_finishline","order":2,"path":"objects/obj_finishline/obj_finishline.yy",},
+    {"name":"spr_finishline","order":2,"path":"sprites/spr_finishline/spr_finishline.yy",},
     {"name":"spr_player_crouch","order":1,"path":"sprites/spr_player_crouch/spr_player_crouch.yy",},
   ],
 }
