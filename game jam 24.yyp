@@ -34,6 +34,7 @@
   },
   "name":"game jam 24",
   "resources":[
+    {"id":{"name":"obj_blacksquare","path":"objects/obj_blacksquare/obj_blacksquare.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_finishline","path":"objects/obj_finishline/obj_finishline.yy",},},
     {"id":{"name":"obj_ground","path":"objects/obj_ground/obj_ground.yy",},},
@@ -42,7 +43,6 @@
     {"id":{"name":"obj_parkbench","path":"objects/obj_parkbench/obj_parkbench.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_trafficcone","path":"objects/obj_trafficcone/obj_trafficcone.yy",},},
-    {"id":{"name":"Object9","path":"objects/Object9/Object9.yy",},},
     {"id":{"name":"jakespracticeroom","path":"rooms/jakespracticeroom/jakespracticeroom.yy",},},
     {"id":{"name":"mattsroom","path":"rooms/mattsroom/mattsroom.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
