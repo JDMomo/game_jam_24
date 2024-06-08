@@ -6,6 +6,7 @@
     {"name":"obj_finishline","order":2,"path":"objects/obj_finishline/obj_finishline.yy",},
     {"name":"obj_groundcornerfill","order":6,"path":"objects/obj_groundcornerfill/obj_groundcornerfill.yy",},
     {"name":"obj_grounddiagnal","order":5,"path":"objects/obj_grounddiagnal/obj_grounddiagnal.yy",},
+    {"name":"obj_music","order":8,"path":"objects/obj_music/obj_music.yy",},
     {"name":"obj_parkbench","order":4,"path":"objects/obj_parkbench/obj_parkbench.yy",},
     {"name":"obj_trafficcone","order":3,"path":"objects/obj_trafficcone/obj_trafficcone.yy",},
     {"name":"jakespracticeroom","order":1,"path":"rooms/jakespracticeroom/jakespracticeroom.yy",},
