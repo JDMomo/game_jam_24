@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_grounddiagnal",
+  "%Name":"obj_bush",
   "eventList":[],
   "managed":true,
-  "name":"obj_grounddiagnal",
+  "name":"obj_bush",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_ground",
-    "path":"objects/obj_ground/obj_ground.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_grounddiagnal",
-    "path":"sprites/spr_grounddiagnal/spr_grounddiagnal.yy",
+    "name":"spr_bush",
+    "path":"sprites/spr_bush/spr_bush.yy",
   },
   "spriteMaskId":null,
   "visible":true,
