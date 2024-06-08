@@ -44,6 +44,7 @@
     {"id":{"name":"obj_groundcornerfill","path":"objects/obj_groundcornerfill/obj_groundcornerfill.yy",},},
     {"id":{"name":"obj_grounddiagnal","path":"objects/obj_grounddiagnal/obj_grounddiagnal.yy",},},
     {"id":{"name":"obj_grounddirt","path":"objects/obj_grounddirt/obj_grounddirt.yy",},},
+    {"id":{"name":"obj_groundgrassupdated","path":"objects/obj_groundgrassupdated/obj_groundgrassupdated.yy",},},
     {"id":{"name":"obj_groundsnow","path":"objects/obj_groundsnow/obj_groundsnow.yy",},},
     {"id":{"name":"obj_music","path":"objects/obj_music/obj_music.yy",},},
     {"id":{"name":"obj_parkbench","path":"objects/obj_parkbench/obj_parkbench.yy",},},
