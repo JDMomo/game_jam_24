@@ -12,10 +12,15 @@ var walkspeed = 4;
 var runspeed = 6;
 var crouchSpeed = 2; // Define in Create event
 
+// Check for inverted controls
+if (timer >= invertControlsDuration) {
+    isControlsInverted = true;
+}
+
 // Input checks
 var shift_pressed = keyboard_check(vk_shift);
-var _right = keyboard_check(vk_right) || keyboard_check(ord("D"));
-var _left = keyboard_check(vk_left) || keyboard_check(ord("A"));
+var _right = (isControlsInverted ? keyboard_check(vk_left) : keyboard_check(vk_right)) || (isControlsInverted ? keyboard_check(ord("A")) : keyboard_check(ord("D")));
+var _left = (isControlsInverted ? keyboard_check(vk_right) : keyboard_check(vk_left)) || (isControlsInverted ? keyboard_check(ord("D")) : keyboard_check(ord("A")));
 var _xinput = _right - _left;
 var isCrouching = keyboard_check(vk_down) || keyboard_check(ord("S"));
 var punch_pressed = keyboard_check(ord("E"));
