@@ -1,15 +1,10 @@
-// Initialize persistent variables
-vspd = 0;
-_canDoubleJump = true;
-_isGliding = false;
-_isCrouching = false;
 
-// Define constants
+// Player movement variables
 my_speed = 4;
 _jumpSpeed = -10;
 _gravity = 0.5;
-_glideSpeed = .5; // Speed during glide
-
-// Define crouching const
-_normalHeight = 1;
-_crouchHeight = 0.5;
+vspd = 0;
+_glideSpeed = 1; // Adjust as needed (this controls how fast the character descends while gliding)
+_canDoubleJump = true; // Allow double jump after regular jump
+// Initial sprite direction (1 for right, -1 for left)
+facing = 1;
