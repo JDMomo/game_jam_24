@@ -69,6 +69,7 @@
     {"id":{"name":"spr_groundcornerfill","path":"sprites/spr_groundcornerfill/spr_groundcornerfill.yy",},},
     {"id":{"name":"spr_grounddiagnal","path":"sprites/spr_grounddiagnal/spr_grounddiagnal.yy",},},
     {"id":{"name":"spr_grounddirt","path":"sprites/spr_grounddirt/spr_grounddirt.yy",},},
+    {"id":{"name":"spr_groundgrassupdated","path":"sprites/spr_groundgrassupdated/spr_groundgrassupdated.yy",},},
     {"id":{"name":"spr_groundsnow","path":"sprites/spr_groundsnow/spr_groundsnow.yy",},},
     {"id":{"name":"spr_level1background","path":"sprites/spr_level1background/spr_level1background.yy",},},
     {"id":{"name":"spr_parkbench","path":"sprites/spr_parkbench/spr_parkbench.yy",},},

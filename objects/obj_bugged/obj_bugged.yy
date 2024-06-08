@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_groundgrass",
-    "path":"sprites/spr_groundgrass/spr_groundgrass.yy",
+    "name":"spr_groundgrassupdated",
+    "path":"sprites/spr_groundgrassupdated/spr_groundgrassupdated.yy",
   },
   "spriteMaskId":null,
   "visible":true,
