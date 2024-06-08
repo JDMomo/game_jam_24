@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ground2",
+  "%Name":"obj_rightspike",
   "eventList":[],
   "managed":true,
-  "name":"obj_ground2",
+  "name":"obj_rightspike",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -32,8 +32,8 @@
     "path":"sprites/Sprite3/Sprite3.yy",
   },
   "spriteMaskId":{
-    "name":"spr_player",
-    "path":"sprites/spr_player/spr_player.yy",
+    "name":"spr_ground",
+    "path":"sprites/spr_ground/spr_ground.yy",
   },
   "visible":true,
 }
