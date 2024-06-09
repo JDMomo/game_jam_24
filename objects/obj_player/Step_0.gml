@@ -118,13 +118,39 @@ y += vspd;
 // Handle jumping and double jump
 if (jump_pressed) {
     if (place_meeting(x, y + 1, obj_ground) || place_meeting(x, y + 1, obj_disappearing_block)) {
+        // Regular jump
         vspd = _jumpSpeed;
-        _canDoubleJump = true;
-    } else if (_canDoubleJump) {
+    } else if (_canDoubleJump && global.canDoubleJump) {
+        // Double jump
         vspd = _jumpSpeed;
-        _canDoubleJump = false;
+        _canDoubleJump = false; // Disable double jump after using it
     }
 }
+
+// Handle jumping and double jump
+if (jump_pressed) {
+    if ((place_meeting(x, y + 1, obj_ground) || place_meeting(x, y + 1, obj_disappearing_block))) {
+        // Regular jump
+        vspd = _jumpSpeed;
+    } else if (_canDoubleJump && global.canDoubleJump) {
+        // Double jump
+        vspd = _jumpSpeed;
+        _canDoubleJump = false; // Disable double jump after using it
+    }
+}
+
+// Enable double jump when grounded
+if (place_meeting(x, y + 1, obj_ground) || place_meeting(x, y + 1, obj_disappearing_block)) {
+    _canDoubleJump = true;
+}
+
+// Disable double jump if finish line touched twice
+if (global.finishlineTouches >= 2) {
+    global.canDoubleJump = false;
+} else {
+    global.canDoubleJump = true; // Re-enable double jump if the finish line has not been touched twice
+}
+
 
 // Sprite management
 if (isPunching) {

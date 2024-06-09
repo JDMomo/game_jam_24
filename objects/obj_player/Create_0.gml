@@ -50,3 +50,6 @@ tick_interval = room_speed; // 1 second in game frames
 
 // Create Event of obj_player
 restart_count = 0; // Variable to track the number of restarts
+// Create Event of obj_global_variables
+
+
