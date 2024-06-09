@@ -153,6 +153,28 @@ if (_hspd > 0) {
     image_xscale = -1;
 }
 
+// Step Event of obj_player
+
+// Increment the tick timer
+tick_timer += 1;
+
+// Check if it's time to increase health
+if (tick_timer >= tick_interval) {
+    tick_timer = 0;
+    health += health_fill_speed;
+    
+    // Check if health exceeds max_health
+    if (health >= max_health) {
+        health = 0; // Reset health
+        health_cycle_count += 1; // Increment the cycle count
+        
+        // Change health bar color
+        if (health_cycle_count < max_cycles) {
+            current_health_color = health_colors[health_cycle_count % array_length(health_colors)];
+        }
+    }
+}
+
 // Update timer and check for effects
 timer += 1;
 if (timer >= zoomDuration) {
@@ -163,17 +185,4 @@ if (timer >= redTintDuration) {
 }
 if (timer >= invertColorDuration) {
     isInvertedColorActive = true;
-}
-if (timer >= invertControlsDuration) {
-    isControlsInverted = true;
-}
-
-// Check for collision with obj_finishline and transition to next room
-if (place_meeting(x, y, obj_finishline)) {
-    room_goto_next(); // Transition to the next room
-}
-
-// Restart level on pressing "P"
-if (reset_pressed) {
-    room_restart();
 }
