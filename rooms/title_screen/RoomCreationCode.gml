@@ -1,8 +1,10 @@
+
+
 if (room == title_screen) {
-    audio_stop_sound(0); // Stop any currently playing sound
+    audio_stop_all(); // Stop any currently playing sound
     audio_play_sound(snd_intro, true, 1); // Play intro sound
 } else if (room == mattsroom) {
-    audio_stop_sound(0); // Stop any currently playing sound
+    audio_stop_all(); // Stop any currently playing sound
     audio_play_sound(snd_room1, true, 1); // Play room 1 music
 } else if (room == mattsroom_1) {
     audio_stop_sound(0); // Stop any currently playing sound
