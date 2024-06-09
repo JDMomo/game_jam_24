@@ -1,8 +1,8 @@
 // Define sprites
 var idle_sprite = spr_player_idle1;
 var walk_sprite = spr_player_walk;
-var run_sprite = spr_player_run;
-var jump_sprite = spr_player_jump;
+var run_sprite = spr_player_run1;
+var jump_sprite = spr_player_jump1;
 var glide_sprite = spr_player_glide;
 var crouch_sprite = spr_player_crouch;
 var punch_sprite = spr_player_punch;
@@ -55,8 +55,8 @@ if (keyboard_check(vk_space) && !place_meeting(x, y + 1, obj_ground) && vspd > 0
 // Horizontal movement
 var _hspd = _xinput * current_speed;
 
-if (object_exists(obj_wall) && !canBypassWalls && place_meeting(x + _hspd, y, obj_wall)) {
-    while (!place_meeting(x + sign(_hspd), y, obj_wall)) {
+if (object_exists(obj_concretebreakable) && !canBypassWalls && place_meeting(x + _hspd, y, obj_concretebreakable)) {
+    while (!place_meeting(x + sign(_hspd), y, obj_concretebreakable)) {
         x += sign(_hspd);
     }
     _hspd = 0;
@@ -82,8 +82,8 @@ if (keyboard_check_pressed(vk_space)) {
 }
 
 // Vertical collision
-if (object_exists(obj_wall) && !canBypassWalls && place_meeting(x, y + vspd, obj_wall)) {
-    while (!place_meeting(x, y + sign(vspd), obj_wall)) {
+if (object_exists(obj_concretebreakable) && !canBypassWalls && place_meeting(x, y + vspd, obj_concretebreakable)) {
+    while (!place_meeting(x, y + sign(vspd), obj_concretebreakable)) {
         y += sign(vspd);
     }
     vspd = 0;

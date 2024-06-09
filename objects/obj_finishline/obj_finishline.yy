@@ -6,8 +6,8 @@
   "name":"obj_finishline",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"interactable",
+    "path":"folders/Objects/interactable.yy",
   },
   "parentObjectId":null,
   "persistent":false,
