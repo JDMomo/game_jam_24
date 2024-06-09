@@ -109,6 +109,7 @@
     {"name":"obj_mokeymatt1","order":20,"path":"objects/obj_mokeymatt1/obj_mokeymatt1.yy",},
     {"name":"obj_music","order":1,"path":"objects/obj_music/obj_music.yy",},
     {"name":"obj_parkbench","order":13,"path":"objects/obj_parkbench/obj_parkbench.yy",},
+    {"name":"obj_player_start","order":76,"path":"objects/obj_player_start/obj_player_start.yy",},
     {"name":"obj_playerstandstill","order":14,"path":"objects/obj_playerstandstill/obj_playerstandstill.yy",},
     {"name":"obj_rock","order":14,"path":"objects/obj_rock/obj_rock.yy",},
     {"name":"obj_rollingrock","order":15,"path":"objects/obj_rollingrock/obj_rollingrock.yy",},
