@@ -1,5 +1,14 @@
 audio_stop_all(); // Stop any currently playing sound
 
+global.canGlide = false
+global.canGlide = false
+// In the Room Start event of obj_player in level 3
+canDoubleJump = false;
+show_debug_message("Double jump disabled at room start.");
+crouchspeed = 0
+runspeed = 4
+
+
 if (room == title_screen) {
     audio_stop_all(); // Stop any currently playing sound
     audio_play_sound(snd_intro, true, 1); // Play intro sound

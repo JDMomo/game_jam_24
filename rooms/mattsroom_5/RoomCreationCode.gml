@@ -1,6 +1,8 @@
 
 audio_stop_all(); // Stop any currently playing sound
 
+global.canGlide = false
+
 if (room == title_screen) {
     audio_play_sound(snd_intro, true, 1); // Play intro sound
 } else if (room == mattsroom) {
