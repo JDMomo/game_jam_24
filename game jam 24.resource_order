@@ -115,6 +115,7 @@
     {"name":"obj_rollingrock","order":15,"path":"objects/obj_rollingrock/obj_rollingrock.yy",},
     {"name":"obj_sewergrate","order":16,"path":"objects/obj_sewergrate/obj_sewergrate.yy",},
     {"name":"obj_trafficcone","order":17,"path":"objects/obj_trafficcone/obj_trafficcone.yy",},
+    {"name":"obj_trampoline","order":77,"path":"objects/obj_trampoline/obj_trampoline.yy",},
     {"name":"obj_wall","order":1,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"Credit_screen","order":4,"path":"rooms/Credit_screen/Credit_screen.yy",},
     {"name":"gameover_screen","order":5,"path":"rooms/gameover_screen/gameover_screen.yy",},
@@ -249,6 +250,7 @@
     {"name":"Spr_Sprint","order":30,"path":"sprites/Spr_Sprint/Spr_Sprint.yy",},
     {"name":"spr_sprintfinal","order":35,"path":"sprites/spr_sprintfinal/spr_sprintfinal.yy",},
     {"name":"spr_trafficcone","order":9,"path":"sprites/spr_trafficcone/spr_trafficcone.yy",},
+    {"name":"spr_trampoline","order":125,"path":"sprites/spr_trampoline/spr_trampoline.yy",},
     {"name":"spr_victoryscreen","order":123,"path":"sprites/spr_victoryscreen/spr_victoryscreen.yy",},
   ],
 }

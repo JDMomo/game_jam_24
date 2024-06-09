@@ -2,7 +2,6 @@
   "$GMObject":"",
   "%Name":"obj_trampoline",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
@@ -31,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ladder",
-    "path":"sprites/spr_ladder/spr_ladder.yy",
+    "name":"spr_trampoline",
+    "path":"sprites/spr_trampoline/spr_trampoline.yy",
   },
   "spriteMaskId":null,
   "visible":false,
