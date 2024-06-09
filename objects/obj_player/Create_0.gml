@@ -12,10 +12,10 @@ facing = 1;
 
 // Initialize timer and duration for effects
 timer = 0;
-zoomDuration = 300 * room_speed; // 20 seconds in game frames
-redTintDuration = 303 * room_speed; // 30 seconds in game frames
-invertColorDuration = 403 * room_speed; // 40 seconds in game frames
-invertControlsDuration = 503 * room_speed; // 50 seconds in game frames
+zoomDuration = 60 * room_speed; // 20 seconds in game frames
+redTintDuration = 20 * room_speed; // 30 seconds in game frames
+invertColorDuration = 20 * room_speed; // 40 seconds in game frames
+invertControlsDuration = 40 * room_speed; // 50 seconds in game frames
 isZoomActive = false; // Flag to check if zoom is active
 isRedTintActive = false; // Flag to check if red tint is active
 isInvertedColorActive = false; // Flag to check if color inversion is active
@@ -34,7 +34,7 @@ max_health = 100; // Maximum health value
 // Create Event of obj_player
 
 // Health variables
-max_health = 60;
+max_health = 20;
 _health = 0;
 health_fill_speed = 1; // Health ticks up by 1 every second
 health_cycle_count = 0;
