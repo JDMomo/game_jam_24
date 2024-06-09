@@ -128,6 +128,7 @@
     {"name":"Room1","order":1,"path":"rooms/Room1/Room1.yy",},
     {"name":"title_screen","order":3,"path":"rooms/title_screen/title_screen.yy",},
     {"name":"victory_screen","order":6,"path":"rooms/victory_screen/victory_screen.yy",},
+    {"name":"snd_crouch","order":15,"path":"sounds/snd_crouch/snd_crouch.yy",},
     {"name":"snd_finish","order":12,"path":"sounds/snd_finish/snd_finish.yy",},
     {"name":"snd_glide","order":4,"path":"sounds/snd_glide/snd_glide.yy",},
     {"name":"snd_intro","order":6,"path":"sounds/snd_intro/snd_intro.yy",},

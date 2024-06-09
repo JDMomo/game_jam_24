@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_room5",
+  "%Name":"snd_crouch",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":32.856,
-  "name":"snd_room5",
+  "duration":4.75,
+  "name":"snd_crouch",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_room5.mp3",
+  "soundFile":"snd_crouch.wav",
   "type":0,
-  "volume":0.26,
+  "volume":0.81,
 }

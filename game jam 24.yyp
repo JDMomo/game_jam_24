@@ -154,6 +154,7 @@
     {"id":{"name":"victory_screen","path":"rooms/victory_screen/victory_screen.yy",},},
     {"id":{"name":"shd_invert","path":"shaders/shd_invert/shd_invert.yy",},},
     {"id":{"name":"snd_background","path":"sounds/snd_background/snd_background.yy",},},
+    {"id":{"name":"snd_crouch","path":"sounds/snd_crouch/snd_crouch.yy",},},
     {"id":{"name":"snd_finish","path":"sounds/snd_finish/snd_finish.yy",},},
     {"id":{"name":"snd_glide","path":"sounds/snd_glide/snd_glide.yy",},},
     {"id":{"name":"snd_intro","path":"sounds/snd_intro/snd_intro.yy",},},

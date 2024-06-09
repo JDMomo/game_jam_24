@@ -24,7 +24,16 @@ var punch_pressed = keyboard_check_pressed(ord("E"));
 var jump_pressed = keyboard_check_pressed(vk_space);
 var reset_pressed = keyboard_check_pressed(ord("P")); // Check for level reset
 
+// Variable to keep track of crouch state
+var wasCrouching = isCrouching;
+
+// If the player started crouching in this step, play the crouch sound
+if (isCrouching) {
+    audio_play_sound(snd_crouch, true, 1);
+}
+
 // Update controls if inverted
+
 if (timer >= invertControlsDuration) {
     isControlsInverted = true;
 }
@@ -119,7 +128,7 @@ y += vspd;
 // Check if the jump key is pressed
 if (keyboard_check_pressed(vk_space)) {
     // Play the jump sound
-    audio_play_sound(snd_jump, false, 1);
+    audio_play_sound_(snd_jump, true, 300);
     
     // Add code here to handle the player's jump mechanics (e.g., change vertical speed)
 
