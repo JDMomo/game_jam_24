@@ -34,6 +34,7 @@
   },
   "name":"game jam 24",
   "resources":[
+    {"id":{"name":"obj_abilityboard","path":"objects/obj_abilityboard/obj_abilityboard.yy",},},
     {"id":{"name":"obj_blacksquare","path":"objects/obj_blacksquare/obj_blacksquare.yy",},},
     {"id":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},},
     {"id":{"name":"obj_bush","path":"objects/obj_bush/obj_bush.yy",},},
@@ -59,6 +60,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"shd_invert","path":"shaders/shd_invert/shd_invert.yy",},},
     {"id":{"name":"snd_background","path":"sounds/snd_background/snd_background.yy",},},
+    {"id":{"name":"spr_abilityboard","path":"sprites/spr_abilityboard/spr_abilityboard.yy",},},
     {"id":{"name":"spr_blacksquare","path":"sprites/spr_blacksquare/spr_blacksquare.yy",},},
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},
     {"id":{"name":"spr_bush","path":"sprites/spr_bush/spr_bush.yy",},},
