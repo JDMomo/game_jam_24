@@ -26,3 +26,25 @@ isPunching = false;
 punchCounter = 0;
 punchCooldown = 2 * room_speed; // Punch lasts for 2 seconds
 canBypassWalls = false;
+
+// Initialize player health
+_health = 100; // Example health value
+max_health = 100; // Maximum health value
+
+// Create Event of obj_player
+
+// Health variables
+max_health = 60;
+_health = 0;
+health_fill_speed = 1; // Health ticks up by 1 every second
+health_cycle_count = 0;
+max_cycles = 3;
+
+// Color cycle array
+health_colors = [c_red, c_green, c_blue];
+current_health_color = health_colors[0];
+
+// Timing variables
+tick_timer = 0;
+tick_interval = room_speed; // 1 second in game frames
+
