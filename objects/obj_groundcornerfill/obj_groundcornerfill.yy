@@ -6,8 +6,8 @@
   "name":"obj_groundcornerfill",
   "overriddenProperties":[],
   "parent":{
-    "name":"terrain",
-    "path":"folders/Objects/terrain.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":{
     "name":"obj_ground",

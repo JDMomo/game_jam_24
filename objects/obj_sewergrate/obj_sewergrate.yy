@@ -6,8 +6,8 @@
   "name":"obj_sewergrate",
   "overriddenProperties":[],
   "parent":{
-    "name":"terrain",
-    "path":"folders/Objects/terrain.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
