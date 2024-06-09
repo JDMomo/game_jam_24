@@ -52,4 +52,5 @@ tick_interval = room_speed; // 1 second in game frames
 restart_count = 0; // Variable to track the number of restarts
 // Create Event of obj_global_variables
 
-
+global.finishlineTouches = 0;
+global.canGlide = true; // Set default value for canGlide
