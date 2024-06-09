@@ -139,6 +139,7 @@
     {"name":"snd_room3","order":9,"path":"sounds/snd_room3/snd_room3.yy",},
     {"name":"snd_room4","order":10,"path":"sounds/snd_room4/snd_room4.yy",},
     {"name":"snd_room5","order":11,"path":"sounds/snd_room5/snd_room5.yy",},
+    {"name":"snd_room6","order":14,"path":"sounds/snd_room6/snd_room6.yy",},
     {"name":"snd_run","order":3,"path":"sounds/snd_run/snd_run.yy",},
     {"name":"snd_walk","order":2,"path":"sounds/snd_walk/snd_walk.yy",},
     {"name":"spr_abilityboard_0","order":47,"path":"sprites/spr_abilityboard_0/spr_abilityboard_0.yy",},

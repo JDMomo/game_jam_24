@@ -165,6 +165,7 @@
     {"id":{"name":"snd_room3","path":"sounds/snd_room3/snd_room3.yy",},},
     {"id":{"name":"snd_room4","path":"sounds/snd_room4/snd_room4.yy",},},
     {"id":{"name":"snd_room5","path":"sounds/snd_room5/snd_room5.yy",},},
+    {"id":{"name":"snd_room6","path":"sounds/snd_room6/snd_room6.yy",},},
     {"id":{"name":"snd_run","path":"sounds/snd_run/snd_run.yy",},},
     {"id":{"name":"snd_walk","path":"sounds/snd_walk/snd_walk.yy",},},
     {"id":{"name":"spr_abilityboard_0","path":"sprites/spr_abilityboard_0/spr_abilityboard_0.yy",},},

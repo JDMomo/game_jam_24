@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_intro",
+  "%Name":"snd_room6",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,7 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":32.856,
-  "name":"snd_intro",
+  "name":"snd_room6",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_intro.mp3",
+  "soundFile":"snd_room6.mp3",
   "type":0,
   "volume":1.0,
 }
