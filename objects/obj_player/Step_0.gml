@@ -72,7 +72,10 @@ if (keyboard_check(vk_space) && !place_meeting(x, y + 1, obj_ground) && vspd > 0
 // Horizontal movement
 var _hspd = _xinput * current_speed;
 
-// Horizontal collision handling
+// Apply gravity
+vspd += _gravity;
+
+// Handle horizontal collisions
 if (!canBypassWalls) {
     if (place_meeting(x + _hspd, y, obj_wall) || place_meeting(x + _hspd, y, obj_ground) || place_meeting(x + _hspd, y, obj_disappearing_block)) {
         while (!place_meeting(x + sign(_hspd), y, obj_wall) &&
@@ -86,31 +89,26 @@ if (!canBypassWalls) {
 
 x += _hspd;
 
-// Apply gravity
-vspd += _gravity;
-
-// Vertical collision handling
-if (!canBypassWalls) {
-    if (vspd > 0) {
-        // Moving down
-        if (place_meeting(x, y + vspd, obj_wall) || place_meeting(x, y + vspd, obj_ground) || place_meeting(x, y + vspd, obj_disappearing_block)) {
-            while (!place_meeting(x, y + 1, obj_wall) &&
-                   !place_meeting(x, y + 1, obj_ground) &&
-                   !place_meeting(x, y + 1, obj_disappearing_block)) {
-                y += 1;
-            }
-            vspd = 0;
+// Handle vertical collisions
+if (vspd > 0) {
+    // Moving down
+    if (place_meeting(x, y + vspd, obj_wall) || place_meeting(x, y + vspd, obj_ground) || place_meeting(x, y + vspd, obj_disappearing_block)) {
+        while (!place_meeting(x, y + 1, obj_wall) &&
+               !place_meeting(x, y + 1, obj_ground) &&
+               !place_meeting(x, y + 1, obj_disappearing_block)) {
+            y += 1;
         }
-    } else if (vspd < 0) {
-        // Moving up
-        if (place_meeting(x, y + vspd, obj_wall) || place_meeting(x, y + vspd, obj_ground) || place_meeting(x, y + vspd, obj_disappearing_block)) {
-            while (!place_meeting(x, y - 1, obj_wall) &&
-                   !place_meeting(x, y - 1, obj_ground) &&
-                   !place_meeting(x, y - 1, obj_disappearing_block)) {
-                y -= 1;
-            }
-            vspd = 0;
+        vspd = 0;
+    }
+} else if (vspd < 0) {
+    // Moving up
+    if (place_meeting(x, y + vspd, obj_wall) || place_meeting(x, y + vspd, obj_ground) || place_meeting(x, y + vspd, obj_disappearing_block)) {
+        while (!place_meeting(x, y - 1, obj_wall) &&
+               !place_meeting(x, y - 1, obj_ground) &&
+               !place_meeting(x, y - 1, obj_disappearing_block)) {
+            y -= 1;
         }
+        vspd = 0;
     }
 }
 
@@ -179,4 +177,3 @@ if (place_meeting(x, y, obj_finishline)) {
 if (reset_pressed) {
     room_restart();
 }
-
