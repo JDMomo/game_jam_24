@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_abilityboard",
+  "%Name":"obj_abilityboard_3",
   "eventList":[],
   "managed":true,
-  "name":"obj_abilityboard",
+  "name":"obj_abilityboard_3",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_abilityboard",
-    "path":"sprites/spr_abilityboard/spr_abilityboard.yy",
+    "name":"spr_abilityboard_3",
+    "path":"sprites/spr_abilityboard_3/spr_abilityboard_3.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,4 +1,4 @@
-// Define constants
+// Create Event of obj_player
 my_speed = 3;
 _jumpSpeed = -10;
 _gravity = 0.5;
