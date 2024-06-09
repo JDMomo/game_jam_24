@@ -119,7 +119,7 @@ y += vspd;
 // Check if the jump key is pressed
 if (keyboard_check_pressed(vk_space)) {
     // Play the jump sound
-    audio_play_sound(snd_jump, false);
+    audio_play_sound(snd_jump, false, 1);
     
     // Add code here to handle the player's jump mechanics (e.g., change vertical speed)
 
