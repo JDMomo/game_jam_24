@@ -54,6 +54,7 @@
     {"id":{"name":"obj_chris2","path":"objects/obj_chris2/obj_chris2.yy",},},
     {"id":{"name":"obj_disappearing_block","path":"objects/obj_disappearing_block/obj_disappearing_block.yy",},},
     {"id":{"name":"obj_finishline","path":"objects/obj_finishline/obj_finishline.yy",},},
+    {"id":{"name":"obj_globalvariable","path":"objects/obj_globalvariable/obj_globalvariable.yy",},},
     {"id":{"name":"obj_ground","path":"objects/obj_ground/obj_ground.yy",},},
     {"id":{"name":"obj_groundcornerfill","path":"objects/obj_groundcornerfill/obj_groundcornerfill.yy",},},
     {"id":{"name":"obj_grounddiagnal","path":"objects/obj_grounddiagnal/obj_grounddiagnal.yy",},},

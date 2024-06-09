@@ -1,18 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_blacksquare",
-  "eventList":[],
+  "%Name":"obj_globalvariable",
+  "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_blacksquare",
+  "name":"obj_globalvariable",
   "overriddenProperties":[],
   "parent":{
-    "name":"terrain",
-    "path":"folders/Objects/terrain.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_ground",
-    "path":"objects/obj_ground/obj_ground.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_blacksquare",
-    "path":"sprites/spr_blacksquare/spr_blacksquare.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
