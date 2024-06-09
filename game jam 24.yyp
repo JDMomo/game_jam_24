@@ -81,6 +81,7 @@
     {"id":{"name":"spr_level1background","path":"sprites/spr_level1background/spr_level1background.yy",},},
     {"id":{"name":"spr_parkbench","path":"sprites/spr_parkbench/spr_parkbench.yy",},},
     {"id":{"name":"spr_player_crouch","path":"sprites/spr_player_crouch/spr_player_crouch.yy",},},
+    {"id":{"name":"spr_player_crouch1","path":"sprites/spr_player_crouch1/spr_player_crouch1.yy",},},
     {"id":{"name":"spr_player_glide","path":"sprites/spr_player_glide/spr_player_glide.yy",},},
     {"id":{"name":"spr_player_glide1","path":"sprites/spr_player_glide1/spr_player_glide1.yy",},},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},},

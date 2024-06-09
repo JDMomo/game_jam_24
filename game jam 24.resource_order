@@ -55,6 +55,7 @@
     {"name":"spr_level1background","order":9,"path":"sprites/spr_level1background/spr_level1background.yy",},
     {"name":"spr_parkbench","order":4,"path":"sprites/spr_parkbench/spr_parkbench.yy",},
     {"name":"spr_player_crouch","order":1,"path":"sprites/spr_player_crouch/spr_player_crouch.yy",},
+    {"name":"spr_player_crouch1","order":27,"path":"sprites/spr_player_crouch1/spr_player_crouch1.yy",},
     {"name":"spr_player_glide1","order":26,"path":"sprites/spr_player_glide1/spr_player_glide1.yy",},
     {"name":"spr_player_idle","order":22,"path":"sprites/spr_player_idle/spr_player_idle.yy",},
     {"name":"spr_player_jump1","order":25,"path":"sprites/spr_player_jump1/spr_player_jump1.yy",},
