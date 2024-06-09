@@ -1,3 +1,5 @@
+// Step Event of obj_player
+
 // Define sprites
 var idle_sprite = spr_player_idle1;
 var walk_sprite = spr_player_walk;
@@ -10,20 +12,25 @@ var punch_sprite = spr_player_punch1;
 // Define speeds
 var walkspeed = 4;
 var runspeed = 6;
-var crouchSpeed = 2; // Define in Create event
+var crouchSpeed = 2;
 
-// Check for inverted controls
+// Input checks
+var shift_pressed = keyboard_check(vk_shift);
+var _right = keyboard_check(vk_right) || keyboard_check(ord("D"));
+var _left = keyboard_check(vk_left) || keyboard_check(ord("A"));
+var _xinput = _right - _left;
+var isCrouching = keyboard_check(vk_down) || keyboard_check(ord("S"));
+var punch_pressed = keyboard_check(ord("E"));
+var jump_pressed = keyboard_check_pressed(vk_space);
+
+// Update controls if inverted
 if (timer >= invertControlsDuration) {
     isControlsInverted = true;
 }
 
-// Input checks
-var shift_pressed = keyboard_check(vk_shift);
-var _right = (isControlsInverted ? keyboard_check(vk_left) : keyboard_check(vk_right)) || (isControlsInverted ? keyboard_check(ord("A")) : keyboard_check(ord("D")));
-var _left = (isControlsInverted ? keyboard_check(vk_right) : keyboard_check(vk_left)) || (isControlsInverted ? keyboard_check(ord("D")) : keyboard_check(ord("A")));
-var _xinput = _right - _left;
-var isCrouching = keyboard_check(vk_down) || keyboard_check(ord("S"));
-var punch_pressed = keyboard_check(ord("E"));
+if (isControlsInverted) {
+    _xinput = -_xinput;
+}
 
 // Initialize isGliding
 var isGliding = false;
@@ -40,64 +47,45 @@ if (isCrouching) {
 // Punch logic
 if (punch_pressed) {
     isPunching = true;
-    canBypassWalls = true;
 } else {
     isPunching = false;
-    canBypassWalls = false;
 }
 
 // Handle gliding
 if (keyboard_check(vk_space) && !place_meeting(x, y + 1, obj_ground) && vspd > 0) {
     vspd = max(vspd - 0.8, _glideSpeed);
     isGliding = true;
+} else {
+    isGliding = false;
 }
 
 // Horizontal movement
 var _hspd = _xinput * current_speed;
 
-if (object_exists(obj_wall) && !canBypassWalls && place_meeting(x + _hspd, y, obj_wall)) {
-    while (!place_meeting(x + sign(_hspd), y, obj_wall)) {
+// Apply horizontal movement and handle collisions
+var collidingBlock = instance_place(x + _hspd, y, obj_disappearing_block);
+if (place_meeting(x + _hspd, y, obj_wall) || (collidingBlock != noone && !collidingBlock.isTouched)) {
+    // Move the player as close as possible to the collision point
+    while (!place_meeting(x + sign(_hspd), y, obj_wall) && 
+           !place_meeting(x + sign(_hspd), y, obj_disappearing_block) || 
+           (collidingBlock != noone && collidingBlock.isTouched)) {
         x += sign(_hspd);
     }
     _hspd = 0;
 }
 
-// Add collision handling with obj_breakable
-if (object_exists(obj_breakable)) {
-    if (place_meeting(x + _hspd, y, obj_breakable)) {
-        if (isPunching) {
-            // Move slightly closer to breakable object to ensure punch registers
-            while (!place_meeting(x + sign(_hspd), y, obj_breakable)) {
-                x += sign(_hspd);
-            }
-            _hspd = 0;
-
-            // Destroy the breakable object
-            with (instance_place(x + sign(_hspd), y, obj_breakable)) {
-                instance_destroy();
-            }
-        } else {
-            // Prevent player from passing through
-            while (!place_meeting(x + sign(_hspd), y, obj_breakable)) {
-                x += sign(_hspd);
-            }
-            _hspd = 0;
-        }
-    }
-}
-
 x += _hspd;
 
 // Apply gravity
-if (!place_meeting(x, y + 1, obj_ground)) {
+if (!place_meeting(x, y + 1, obj_ground) && !place_meeting(x, y + 1, obj_disappearing_block)) {
     vspd += _gravity;
 } else {
     vspd = 0;
 }
 
-// Jump and glide logic
-if (keyboard_check_pressed(vk_space)) {
-    if (place_meeting(x, y + 1, obj_ground)) {
+// Handle jumping and double jump
+if (jump_pressed) {
+    if (place_meeting(x, y + 1, obj_ground) || place_meeting(x, y + 1, obj_disappearing_block)) {
         vspd = _jumpSpeed;
         _canDoubleJump = true;
     } else if (_canDoubleJump) {
@@ -106,13 +94,17 @@ if (keyboard_check_pressed(vk_space)) {
     }
 }
 
-// Vertical collision
-if (object_exists(obj_wall) && !canBypassWalls && place_meeting(x, y + vspd, obj_wall)) {
-    while (!place_meeting(x, y + sign(vspd), obj_wall)) {
+// Apply vertical movement and handle collisions
+collidingBlock = instance_place(x, y + vspd, obj_disappearing_block);
+if (place_meeting(x, y + vspd, obj_wall) || (collidingBlock != noone && !collidingBlock.isTouched)) {
+    while (!place_meeting(x, y + sign(vspd), obj_wall) && 
+           !place_meeting(x, y + sign(vspd), obj_disappearing_block) || 
+           (collidingBlock != noone && collidingBlock.isTouched)) {
         y += sign(vspd);
     }
     vspd = 0;
 }
+
 y += vspd;
 
 // Sprite management
@@ -156,8 +148,7 @@ if (timer >= invertColorDuration) {
 
 // Check for collision with obj_finishline and transition to next room
 if (place_meeting(x, y, obj_finishline)) {
-    // Transition to the next room
-    room_goto_next();
+    room_goto_next(); // Transition to the next room
 }
 
 // Restart game on pressing "P"

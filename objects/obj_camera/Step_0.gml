@@ -5,8 +5,8 @@ var player = instance_find(obj_player, 0);
 
 if (player != noone) { // If player object exists
     // Original and zoomed view sizes
-    var view_w_original = 400; // Slightly zoomed-out original view width
-    var view_h_original = 300; // Slightly zoomed-out original view height
+    var view_w_original = 500; // Slightly zoomed-out original view width
+    var view_h_original = 400; // Slightly zoomed-out original view height
     var zoom_w = 64; // Zoomed-in width
     var zoom_h = 64; // Zoomed-in height
 
