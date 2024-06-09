@@ -40,6 +40,7 @@
     {"name":"obj_wall","order":19,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"jakespracticeroom","order":2,"path":"rooms/jakespracticeroom/jakespracticeroom.yy",},
     {"name":"Room1","order":1,"path":"rooms/Room1/Room1.yy",},
+    {"name":"spr_abilityboard","order":28,"path":"sprites/spr_abilityboard/spr_abilityboard.yy",},
     {"name":"spr_blacksquare","order":7,"path":"sprites/spr_blacksquare/spr_blacksquare.yy",},
     {"name":"spr_box","order":10,"path":"sprites/spr_box/spr_box.yy",},
     {"name":"spr_bush","order":11,"path":"sprites/spr_bush/spr_bush.yy",},
