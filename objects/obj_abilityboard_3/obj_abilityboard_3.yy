@@ -6,8 +6,8 @@
   "name":"obj_abilityboard_3",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"ability_board",
+    "path":"folders/Objects/ability_board.yy",
   },
   "parentObjectId":null,
   "persistent":false,

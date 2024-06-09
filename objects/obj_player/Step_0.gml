@@ -12,7 +12,7 @@ var punch_sprite = spr_player_punch1;
 // Define speeds
 var walkspeed = 4;
 var runspeed = 6;
-var crouchSpeed = 2;
+var crouchSpeed = 2; // Define in Create event
 
 // Input checks
 var shift_pressed = keyboard_check(vk_shift);
@@ -22,6 +22,7 @@ var _xinput = _right - _left;
 var isCrouching = keyboard_check(vk_down) || keyboard_check(ord("S"));
 var punch_pressed = keyboard_check(ord("E"));
 var jump_pressed = keyboard_check_pressed(vk_space);
+var reset_pressed = keyboard_check_pressed(ord("P")); // Check for level reset
 
 // Update controls if inverted
 if (timer >= invertControlsDuration) {
@@ -151,8 +152,8 @@ if (place_meeting(x, y, obj_finishline)) {
     room_goto_next(); // Transition to the next room
 }
 
-// Restart game on pressing "P"
-if (keyboard_check_pressed(ord("P"))) {
-    game_restart();
+// Restart level on pressing "P"
+if (reset_pressed) {
+    room_restart();
 }
 }
