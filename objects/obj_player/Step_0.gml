@@ -116,6 +116,13 @@ if (vspd > 0) {
 y += vspd;
 
 // Handle jumping and double jump
+// Check if the jump key is pressed
+if (keyboard_check_pressed(vk_space)) {
+    // Play the jump sound
+    audio_play_sound(snd_jump, false);
+    
+    // Add code here to handle the player's jump mechanics (e.g., change vertical speed)
+
 if (jump_pressed) {
     if (place_meeting(x, y + 1, obj_ground) || place_meeting(x, y + 1, obj_disappearing_block)) {
         // Regular jump
@@ -126,7 +133,7 @@ if (jump_pressed) {
         _canDoubleJump = false; // Disable double jump after using it
     }
 }
-
+}
 // Handle jumping and double jump
 if (jump_pressed) {
     if ((place_meeting(x, y + 1, obj_ground) || place_meeting(x, y + 1, obj_disappearing_block))) {
