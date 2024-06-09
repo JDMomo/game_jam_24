@@ -1,3 +1,7 @@
+// In the Room Start event of obj_player in level 3
+global.canDoubleJump = false;
+global.canGlide = false
+
 audio_stop_all(); // Stop any currently playing sound
 
 if (room == title_screen) {
