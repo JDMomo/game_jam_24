@@ -1,15 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_finishline",
+  "%Name":"obj_trampoline",
   "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_finishline",
+  "name":"obj_trampoline",
   "overriddenProperties":[],
   "parent":{
-    "name":"interactable",
-    "path":"folders/Objects/interactable.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_finishline",
-    "path":"sprites/spr_finishline/spr_finishline.yy",
+    "name":"spr_ladder",
+    "path":"sprites/spr_ladder/spr_ladder.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

@@ -62,12 +62,13 @@ if (punchCounter > 0) {
 }
 
 // Handle gliding
-if (keyboard_check(vk_space) && !place_meeting(x, y + 1, obj_ground) && vspd > 0) {
+if (keyboard_check(vk_space) && !place_meeting(x, y + 1, obj_ground) && vspd > 0 && global.canGlide) {
     vspd = max(vspd - 0.8, _glideSpeed);
     isGliding = true;
 } else {
     isGliding = false;
 }
+
 
 // Horizontal movement
 var _hspd = _xinput * current_speed;
@@ -117,13 +118,39 @@ y += vspd;
 // Handle jumping and double jump
 if (jump_pressed) {
     if (place_meeting(x, y + 1, obj_ground) || place_meeting(x, y + 1, obj_disappearing_block)) {
+        // Regular jump
         vspd = _jumpSpeed;
-        _canDoubleJump = true;
-    } else if (_canDoubleJump) {
+    } else if (_canDoubleJump && global.canDoubleJump) {
+        // Double jump
         vspd = _jumpSpeed;
-        _canDoubleJump = false;
+        _canDoubleJump = false; // Disable double jump after using it
     }
 }
+
+// Handle jumping and double jump
+if (jump_pressed) {
+    if ((place_meeting(x, y + 1, obj_ground) || place_meeting(x, y + 1, obj_disappearing_block))) {
+        // Regular jump
+        vspd = _jumpSpeed;
+    } else if (_canDoubleJump && global.canDoubleJump) {
+        // Double jump
+        vspd = _jumpSpeed;
+        _canDoubleJump = false; // Disable double jump after using it
+    }
+}
+
+// Enable double jump when grounded
+if (place_meeting(x, y + 1, obj_ground) || place_meeting(x, y + 1, obj_disappearing_block)) {
+    _canDoubleJump = true;
+}
+
+// Disable double jump if finish line touched twice
+if (global.finishlineTouches >= 2) {
+    global.canDoubleJump = false;
+} else {
+    global.canDoubleJump = true; // Re-enable double jump if the finish line has not been touched twice
+}
+
 
 // Sprite management
 if (isPunching) {
@@ -153,6 +180,28 @@ if (_hspd > 0) {
     image_xscale = -1;
 }
 
+// Step Event of obj_player
+
+// Increment the tick timer
+tick_timer += 1;
+
+// Check if it's time to increase health
+if (tick_timer >= tick_interval) {
+    tick_timer = 0;
+    health += health_fill_speed;
+    
+    // Check if health exceeds max_health
+    if (health >= max_health) {
+        health = 0; // Reset health
+        health_cycle_count += 1; // Increment the cycle count
+        
+        // Change health bar color
+        if (health_cycle_count < max_cycles) {
+            current_health_color = health_colors[health_cycle_count % array_length(health_colors)];
+        }
+    }
+}
+
 // Update timer and check for effects
 timer += 1;
 if (timer >= zoomDuration) {
@@ -163,17 +212,4 @@ if (timer >= redTintDuration) {
 }
 if (timer >= invertColorDuration) {
     isInvertedColorActive = true;
-}
-if (timer >= invertControlsDuration) {
-    isControlsInverted = true;
-}
-
-// Check for collision with obj_finishline and transition to next room
-if (place_meeting(x, y, obj_finishline)) {
-    room_goto_next(); // Transition to the next room
-}
-
-// Restart level on pressing "P"
-if (reset_pressed) {
-    room_restart();
 }
