@@ -61,6 +61,31 @@ if (object_exists(obj_wall) && !canBypassWalls && place_meeting(x + _hspd, y, ob
     }
     _hspd = 0;
 }
+
+// Add collision handling with obj_breakable
+if (object_exists(obj_breakable)) {
+    if (place_meeting(x + _hspd, y, obj_breakable)) {
+        if (isPunching) {
+            // Move slightly closer to breakable object to ensure punch registers
+            while (!place_meeting(x + sign(_hspd), y, obj_breakable)) {
+                x += sign(_hspd);
+            }
+            _hspd = 0;
+
+            // Destroy the breakable object
+            with (instance_place(x + sign(_hspd), y, obj_breakable)) {
+                instance_destroy();
+            }
+        } else {
+            // Prevent player from passing through
+            while (!place_meeting(x + sign(_hspd), y, obj_breakable)) {
+                x += sign(_hspd);
+            }
+            _hspd = 0;
+        }
+    }
+}
+
 x += _hspd;
 
 // Apply gravity
@@ -128,7 +153,6 @@ if (timer >= redTintDuration) {
 }
 if (timer >= invertColorDuration) {
     isInvertedColorActive = true;
-}
 
 // Check for collision with obj_finishline and transition to next room
 if (place_meeting(x, y, obj_finishline)) {
@@ -139,4 +163,5 @@ if (place_meeting(x, y, obj_finishline)) {
 // Restart game on pressing "P"
 if (keyboard_check_pressed(ord("P"))) {
     game_restart();
+}
 }

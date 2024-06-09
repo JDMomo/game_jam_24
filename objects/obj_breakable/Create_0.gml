@@ -1,5 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
 // Create Event of obj_breakable
-// Initialize health if needed
-health = 1; // You can use health for more complex breakage logic
+// Initialize health or other properties if needed
+health = 1; // Example property, not used directly here
+
+// Set the object to be solid
+solid = true;
