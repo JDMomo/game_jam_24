@@ -16,6 +16,7 @@
     {"name":"Timelines","order":13,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"obj_abilityboard_all","order":20,"path":"objects/obj_abilityboard_all/obj_abilityboard_all.yy",},
     {"name":"obj_blacksquare","order":7,"path":"objects/obj_blacksquare/obj_blacksquare.yy",},
     {"name":"obj_box","order":10,"path":"objects/obj_box/obj_box.yy",},
     {"name":"obj_bush","order":11,"path":"objects/obj_bush/obj_bush.yy",},
@@ -36,6 +37,7 @@
     {"name":"obj_wall","order":13,"path":"objects/obj_wall/obj_wall.yy",},
     {"name":"jakespracticeroom","order":2,"path":"rooms/jakespracticeroom/jakespracticeroom.yy",},
     {"name":"Room1","order":1,"path":"rooms/Room1/Room1.yy",},
+    {"name":"spr_abilityboard","order":24,"path":"sprites/spr_abilityboard/spr_abilityboard.yy",},
     {"name":"spr_blacksquare","order":7,"path":"sprites/spr_blacksquare/spr_blacksquare.yy",},
     {"name":"spr_box","order":10,"path":"sprites/spr_box/spr_box.yy",},
     {"name":"spr_bush","order":11,"path":"sprites/spr_bush/spr_bush.yy",},
@@ -59,5 +61,6 @@
     {"name":"spr_sewergrate2","order":14,"path":"sprites/spr_sewergrate2/spr_sewergrate2.yy",},
     {"name":"spr_snowbreakableWall","order":21,"path":"sprites/spr_snowbreakableWall/spr_snowbreakableWall.yy",},
     {"name":"spr_trafficcone","order":3,"path":"sprites/spr_trafficcone/spr_trafficcone.yy",},
+    {"name":"sprite_abilityboard_all","order":23,"path":"sprites/sprite_abilityboard_all/sprite_abilityboard_all.yy",},
   ],
 }
