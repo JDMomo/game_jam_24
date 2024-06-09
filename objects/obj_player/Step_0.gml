@@ -12,7 +12,7 @@ var punch_sprite = spr_player_punch1;
 // Define speeds
 var walkspeed = 4;
 var runspeed = 6;
-var crouchSpeed = 2; // Define in Create event
+var crouchSpeed = 2; // Speed while crouching
 
 // Input checks
 var shift_pressed = keyboard_check(vk_shift);
@@ -67,9 +67,9 @@ var _hspd = _xinput * current_speed;
 var collidingBlock = instance_place(x + _hspd, y, obj_disappearing_block);
 if (place_meeting(x + _hspd, y, obj_wall) || (collidingBlock != noone && !collidingBlock.isTouched)) {
     // Move the player as close as possible to the collision point
-    while (!place_meeting(x + sign(_hspd), y, obj_wall) && 
-           !place_meeting(x + sign(_hspd), y, obj_disappearing_block) || 
-           (collidingBlock != noone && collidingBlock.isTouched)) {
+    while (!place_meeting(x + sign(_hspd), y, obj_wall) &&
+           !(collidingBlock != noone && !collidingBlock.isTouched && 
+           !place_meeting(x + sign(_hspd), y, obj_disappearing_block))) {
         x += sign(_hspd);
     }
     _hspd = 0;
@@ -98,9 +98,9 @@ if (jump_pressed) {
 // Apply vertical movement and handle collisions
 collidingBlock = instance_place(x, y + vspd, obj_disappearing_block);
 if (place_meeting(x, y + vspd, obj_wall) || (collidingBlock != noone && !collidingBlock.isTouched)) {
-    while (!place_meeting(x, y + sign(vspd), obj_wall) && 
-           !place_meeting(x, y + sign(vspd), obj_disappearing_block) || 
-           (collidingBlock != noone && collidingBlock.isTouched)) {
+    while (!place_meeting(x, y + sign(vspd), obj_wall) &&
+           !(collidingBlock != noone && !collidingBlock.isTouched && 
+           !place_meeting(x, y + sign(vspd), obj_disappearing_block))) {
         y += sign(vspd);
     }
     vspd = 0;
@@ -146,6 +146,7 @@ if (timer >= redTintDuration) {
 }
 if (timer >= invertColorDuration) {
     isInvertedColorActive = true;
+}
 
 // Check for collision with obj_finishline and transition to next room
 if (place_meeting(x, y, obj_finishline)) {
@@ -155,5 +156,4 @@ if (place_meeting(x, y, obj_finishline)) {
 // Restart level on pressing "P"
 if (reset_pressed) {
     room_restart();
-}
 }
