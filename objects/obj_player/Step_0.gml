@@ -1,11 +1,11 @@
 // Define sprites
 var idle_sprite = spr_player_idle1;
 var walk_sprite = spr_player_walk;
-var run_sprite = spr_player_run;
-var jump_sprite = spr_player_jump;
-var glide_sprite = spr_player_glide;
-var crouch_sprite = spr_player_crouch;
-var punch_sprite = spr_player_punch;
+var run_sprite = spr_player_run1;
+var jump_sprite = spr_player_jump1;
+var glide_sprite = spr_player_glide_1;
+var crouch_sprite = spr_player_crouch1;
+var punch_sprite = spr_player_punch1;
 
 // Define speeds
 var walkspeed = 4;
