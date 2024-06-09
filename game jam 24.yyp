@@ -87,6 +87,7 @@
     {"id":{"name":"spr_player_walk","path":"sprites/spr_player_walk/spr_player_walk.yy",},},
     {"id":{"name":"spr_player1","path":"sprites/spr_player1/spr_player1.yy",},},
     {"id":{"name":"spr_punchfinal","path":"sprites/spr_punchfinal/spr_punchfinal.yy",},},
+    {"id":{"name":"spr_rightarrow","path":"sprites/spr_rightarrow/spr_rightarrow.yy",},},
     {"id":{"name":"spr_rock","path":"sprites/spr_rock/spr_rock.yy",},},
     {"id":{"name":"spr_rollingrock","path":"sprites/spr_rollingrock/spr_rollingrock.yy",},},
     {"id":{"name":"spr_sewergrate1","path":"sprites/spr_sewergrate1/spr_sewergrate1.yy",},},
