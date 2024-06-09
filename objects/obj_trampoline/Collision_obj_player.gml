@@ -1,4 +1,3 @@
-// Collision Event with obj_trampoline
-
-// Launch the player upwards
-other.vspd = -50; // Adjust the launch speed as needed
+/// @description Insert description here
+// You can write your code in this editor
+vspd = -50; // Adjust the launch speed as needed
