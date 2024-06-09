@@ -1,11 +1,11 @@
 {
   "$GMSprite":"",
   "%Name":"spr_groundsnow",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":15,
   "bbox_left":0,
   "bbox_right":31,
-  "bbox_top":0,
+  "bbox_top":7,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
