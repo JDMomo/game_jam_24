@@ -48,3 +48,5 @@ current_health_color = health_colors[0];
 tick_timer = 0;
 tick_interval = room_speed; // 1 second in game frames
 
+// Create Event of obj_player
+restart_count = 0; // Variable to track the number of restarts

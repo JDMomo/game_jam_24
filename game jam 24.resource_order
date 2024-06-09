@@ -32,6 +32,7 @@
     {"name":"obj_chris1","order":18,"path":"objects/obj_chris1/obj_chris1.yy",},
     {"name":"obj_chris2","order":19,"path":"objects/obj_chris2/obj_chris2.yy",},
     {"name":"obj_disappearing_block","order":6,"path":"objects/obj_disappearing_block/obj_disappearing_block.yy",},
+    {"name":"obj_globalvariable","order":45,"path":"objects/obj_globalvariable/obj_globalvariable.yy",},
     {"name":"obj_ground","order":7,"path":"objects/obj_ground/obj_ground.yy",},
     {"name":"obj_groundcornerfill","order":8,"path":"objects/obj_groundcornerfill/obj_groundcornerfill.yy",},
     {"name":"obj_grounddiagnal","order":9,"path":"objects/obj_grounddiagnal/obj_grounddiagnal.yy",},

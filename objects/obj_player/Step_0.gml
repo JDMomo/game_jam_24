@@ -62,12 +62,13 @@ if (punchCounter > 0) {
 }
 
 // Handle gliding
-if (keyboard_check(vk_space) && !place_meeting(x, y + 1, obj_ground) && vspd > 0) {
+if (keyboard_check(vk_space) && !place_meeting(x, y + 1, obj_ground) && vspd > 0 && global.canGlide) {
     vspd = max(vspd - 0.8, _glideSpeed);
     isGliding = true;
 } else {
     isGliding = false;
 }
+
 
 // Horizontal movement
 var _hspd = _xinput * current_speed;
