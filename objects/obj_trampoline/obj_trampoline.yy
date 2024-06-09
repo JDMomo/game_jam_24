@@ -34,5 +34,5 @@
     "path":"sprites/spr_trampoline/spr_trampoline.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

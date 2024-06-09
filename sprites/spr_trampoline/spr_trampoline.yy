@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"spr_trampoline",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":61,
   "bbox_left":9,
   "bbox_right":59,
